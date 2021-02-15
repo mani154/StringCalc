@@ -63,4 +63,20 @@ public class UnitTestsforAdd {
         int expected = 2;
         assertEquals(result, expected);
     }
+
+    @Test
+    public void addTestAnyLengthDelimiter() throws NegativeNumberException {
+        String numbers = "//[***]\n1***2***3";
+        int result = stringCalculator.add(numbers);
+        int expected = 6;
+        assertEquals(result, expected);
+    }
+
+    @Test
+    public void addTestMultipleDelimiters() throws NegativeNumberException {
+        String numbers = "//[*][%]\n1*2%3";
+        int result = stringCalculator.add(numbers);
+        int expected = 6;
+        assertEquals(result, expected);
+    }
 }
