@@ -16,7 +16,11 @@ public class StringCalculator {
             if(number.contains("-")) {
                 throw new NegativeNumberException();
             }
-            result += Integer.parseInt(number);
+            int getNumber = Integer.parseInt(number);
+            if(getNumber >= 1000) {
+                getNumber = 0;
+            }
+            result += getNumber;
         }
         return result;
     }

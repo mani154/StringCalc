@@ -55,4 +55,12 @@ public class UnitTestsforAdd {
         String actualMessage = exception.getMessage();
         assertTrue(actualMessage.contains(expected));
     }
+
+    @Test
+    public void addTestIgnoreAfterThousand() throws NegativeNumberException {
+        String numbers = "1001,2,1003";
+        int result = stringCalculator.add(numbers);
+        int expected = 2;
+        assertEquals(result, expected);
+    }
 }
