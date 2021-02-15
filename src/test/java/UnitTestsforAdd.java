@@ -36,4 +36,12 @@ public class UnitTestsforAdd {
         int expected = 6;
         assertEquals(result, expected);
     }
+
+    @Test
+    public void addTestCustomDelimiter() {
+        String numbers = "//;\n1,2;3";
+        int result = stringCalculator.add(numbers);
+        int expected = 6;
+        assertEquals(result, expected);
+    }
 }
