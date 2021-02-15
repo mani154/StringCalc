@@ -20,4 +20,12 @@ public class UnitTestsforAdd {
         int expected = 1;
         assertEquals(result, expected);
     }
+
+    @Test
+    public void addTestTwoInputsWithComma() {
+        String numbers = "1,2";
+        int result = stringCalculator.add(numbers);
+        int expected = 3;
+        assertEquals(result, expected);
+    }
 }
