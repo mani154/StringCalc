@@ -3,7 +3,7 @@ public class StringCalculator {
         if(numbers.equals("")) {
             return 0;
         }
-        String delimiter = ",";
+        String delimiter = ",|\n";
         String[] numbersSplit = numbers.split(delimiter);
         int result = 0;
         for(String number : numbersSplit) {

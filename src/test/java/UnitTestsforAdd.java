@@ -28,4 +28,12 @@ public class UnitTestsforAdd {
         int expected = 3;
         assertEquals(result, expected);
     }
+
+    @Test
+    public void addTestHandleNewline() {
+        String numbers = "1\n2,3";
+        int result = stringCalculator.add(numbers);
+        int expected = 6;
+        assertEquals(result, expected);
+    }
 }
